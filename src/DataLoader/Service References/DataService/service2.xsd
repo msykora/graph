@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfnode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="node" nillable="true" type="node" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfnode" nillable="true" type="ArrayOfnode" />
+  <xs:complexType name="node">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adjacentNodes" nillable="true" type="adjacentNodes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="node" nillable="true" type="node" />
+  <xs:complexType name="adjacentNodes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="adjacentNodes" nillable="true" type="adjacentNodes" />
+</xs:schema>
